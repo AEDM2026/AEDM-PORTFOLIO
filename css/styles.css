@@ -453,7 +453,7 @@ button, input, textarea {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
@@ -808,6 +808,44 @@ a.project-card:hover {
   gap: 4rem;
 }
 
+.project-detail-grid--full {
+  grid-template-columns: 1fr;
+}
+
+.project-details-bar {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.project-details-bar h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.project-details-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.project-details-bar li {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-details-bar li:last-child {
+  border-bottom: none;
+}
+
 .project-detail-content h2 {
   font-family: var(--font-serif);
   font-size: 1.75rem;
@@ -846,8 +884,8 @@ a.project-card:hover {
   border-radius: var(--radius-md);
   background:
     linear-gradient(135deg,
-      hsl(220 35% 18%) 0%,
-      hsl(220 25% 12%) 100%);
+      hsl(var(--project-hue, 220) 35% 18%) 0%,
+      hsl(var(--project-hue, 220) 25% 12%) 100%);
   display: grid;
   place-items: center;
   color: rgba(255, 255, 255, 0.2);
