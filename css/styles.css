@@ -508,10 +508,9 @@ a.project-card:hover {
 }
 
 .project-placeholder {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.25);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-content {
